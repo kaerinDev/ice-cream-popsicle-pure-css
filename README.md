@@ -3,4 +3,4 @@
 
 <p align="center"> Feito apenas por diversão</p>
 
-<strong>Preview</strong><a href="https://codepen.io/cathyshx/pen/eYvmbRx">https://codepen.io/cathyshx/pen/eYvmbRx</a>
+<strong>Preview: </strong><a href="https://codepen.io/cathyshx/pen/eYvmbRx">https://codepen.io/cathyshx/pen/eYvmbRx</a>
