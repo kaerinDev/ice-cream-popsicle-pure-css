@@ -1,0 +1,232 @@
+/* COLORS */
+
+:root {
+  --pink: rgb(248, 103, 127);
+  --brown: rgb(129, 81, 53);
+  --dark-gray: rgb(35, 35, 35);
+  --light-gray: rgb(53, 53, 53);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: var(--dark-gray);
+}
+
+/* BACKGROUND */
+
+#circle {
+  width: 240px;
+  height: 240px;
+  background-color: var(--light-gray);
+  margin: auto;
+  margin-top: 120px;
+  border-radius: 50%;
+}
+
+/* POPSICLE */
+
+#popsicle {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  animation: float 2s ease-in infinite alternate;
+}
+
+#popsicle #pink-cream {
+  background-color: var(--pink);
+  width: 150px;
+  height: 200px;
+  display: block;
+  margin: auto;
+  border-radius: 60px 60px 6px 6px;
+  border: 2px solid black;
+  position: relative;
+}
+
+#popsicle #melting {
+  position: absolute;
+  background-color: var(--pink);
+  width: 20px;
+  height: 5px;
+  border-radius: 0 0 50% 50%;
+  border: 2px solid black;
+  border-top: 2px solid var(--pink);
+  top: 200px;
+  left: 8px;
+  animation: melting 5s ease-in infinite alternate;
+}
+
+#popsicle #melting #light {
+  background-color: rgb(252, 252, 252);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin-left: 2px;
+  animation: light 5s ease-in infinite alternate;
+}
+
+#popsicle #stick {
+  background-color: var(--brown);
+  width: 50px;
+  height: 70px;
+  display: block;
+  margin: auto;
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+/* POPSICLE EYES */
+
+#eyes {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 40% auto 0;
+  z-index: 1;
+}
+
+#eyes .glow {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  animation: eyeWink 10s ease-in infinite alternate;
+}
+
+#eyes .glow div:first-child {
+  margin: 5px 0 0 5px;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: eyeWink2 10s ease-in infinite alternate;
+}
+
+#eyes .glow div:last-child {
+  margin-left: 26px;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: eyeWink2 10s ease-in infinite alternate;
+}
+
+/* POPSICLE CHEECKS */
+
+#cheecks {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  animation: cheecksMove 8s;
+}
+
+#cheecks div {
+  width: 30px;
+  height: 20px;
+  background-color: rgb(255, 26, 64);
+  border-radius: 50%;
+}
+
+/* POPSICLE MOUTH */
+
+#mouth {
+  width: 50px;
+  height: 30px;
+  background-color: black;
+  position: relative;
+  bottom: 10%;
+  left: 50px;
+  border-radius: 6px 6px 50px 50px;
+  display: flex;
+}
+
+#tongue {
+  width: 20px;
+  height: 10px;
+  background-color: red;
+  margin: 36% auto 0;
+  border-radius: 50%;
+  border-bottom: 1px solid black;
+}
+
+#authoress p:first-child, #authoress strong {
+  font-family: 'Itim', cursive;
+}
+
+#authoress p:last-child {
+  font-family: 'Great Vibes', cursive;
+}
+
+#authoress {
+  font-size: 22px;
+  color: var(--pink);
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ANIMATION */
+
+@keyframes float {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes eyeWink {
+  0%, 8.4%, 10.8%, 13.2%, 16.4%, 36.4%, 42%, 52%, 56.4%, 64.4%, 67.2%, 69.2%, 72.8%, 93.2%, 98% {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+  }
+  8.8%, 9.6%, 14.8%, 15.2%, 36.7%, 40.4%, 53.2%, 54.8%, 65.2%, 66.2%, 71%, 72%, 94%, 96.8% {
+    width: 50px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: black;
+    bottom: 35%;
+  }
+}
+
+@keyframes eyeWink2 {
+  0%, 8%, 10.4%, 12.8%, 16%, 36%, 41.6%, 51.6%, 56%, 64%, 66.8%, 68.8%, 72.4%, 92.8%, 97.6% {
+    opacity: 1;
+  }
+  8.4%, 9.6%, 14.4%, 15.2%, 36.7%, 40.4%, 53.2%, 54.8%, 65.2%, 66.2%, 71%, 72%, 94%, 96.8% {
+    opacity: 0;
+  }
+}
+
+@keyframes melting {
+  100% {
+    height: 20%;
+  }
+}
+
+@keyframes light {
+  100% {
+    transform: translateY(10px);
+    height: 50%;
+  }
+}
